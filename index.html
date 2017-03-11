@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Passes</title>
+	<link rel="stylesheet" href="styles/normalize.css"> <!-- 2nd priority -->
+	<link rel="stylesheet" href="styles/styles.css"> <!-- 1st priority -->
+</head>
+<body class="ba-contact-us">
+
+	<section class="ba-contact">
+		<div class="ba-container">
+			<form class="ba-form" action="https://formspree.io/vladyslav@beetroot.se" method="POST">
+				<label class="ba-form__title" for="full-name">
+					Name
+					<input required class="ba-form__field" type="text" id="full-name" name="full-name" placeholder="Full name">
+				</label>
+
+				<label for="email" class="ba-form__title">
+					Email
+					<input required type="email" class="ba-form__field" id="email" name="email" placeholder="Email address">
+				</label>
+				
+				<label for="passes" class="ba-form__title">
+					Number of Passes
+					<select required class="ba-form__field ba-form__field--small" name="passes" id="passes">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+					</select>
+				</label>
+
+				<label for="comments" class="ba-form__title">
+					Comments
+					<textarea name="comments" rows="5" id="comments" class="ba-form__field"></textarea>
+				</label>
+
+				<button type="submit" class="ba-btn ba-form__btn">Purchase</button>
+			</form>
+		</div>
+	</section>
+
+	<script>
+		document.querySelectorAll('input').forEach( input => {
+			input.addEventListener('blur', (event) => {
+				event.target.classList.add('clicked');
+			});
+		});
+	</script>
+
+</body>
+</html>
