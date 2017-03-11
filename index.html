@@ -46,6 +46,16 @@
 				event.target.classList.add('clicked');
 			});
 		});
+
+
+		let form = new XMLHttpRequest();
+
+		form.open('POST', 'https://formspree.io/vladyslav@beetroot.se');
+
+		form.send(document.forms[0].serialize());
+
+
+
 	</script>
 
 </body>
