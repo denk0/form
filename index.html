@@ -49,15 +49,17 @@
 
 		document.querySelector('button').addEventListener('click', (event) => {
 			event.preventDefault();
+			let form = new XMLHttpRequest();
+		
+			let data = new FormData(document.forms[0]);
+
+			form.open('POST', 'https://formspree.io/vladyslav@beetroot.se');
+
+			form.send(data);
 		});
 
 
-		let form = new XMLHttpRequest();
-		let data = new FormData(document.forms[0]);
 
-		form.open('POST', 'https://formspree.io/vladyslav@beetroot.se');
-
-		form.send(data);
 
 
 
