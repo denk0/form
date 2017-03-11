@@ -53,10 +53,11 @@
 
 
 		let form = new XMLHttpRequest();
+		let data = new FormData(document.forms[0]);
 
 		form.open('POST', 'https://formspree.io/vladyslav@beetroot.se');
 
-		form.send(document.forms[0].serialize());
+		form.send(data);
 
 
 
