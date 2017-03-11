@@ -53,9 +53,9 @@
 		
 			let data = new FormData(document.forms[0]);
 
-			form.setRequestHeader('dataType', 'json');
-
 			form.open('POST', 'https://formspree.io/vladyslav@beetroot.se');
+
+			form.setRequestHeader('dataType', 'json');
 
 			form.onreadystatechange = function() {
 				if (form.readyState === 4 && form.status === 200) {
