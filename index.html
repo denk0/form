@@ -55,7 +55,7 @@
 
 			form.open('POST', 'https://formspree.io/vladyslav@beetroot.se');
 
-			form.setRequestHeader('dataType', 'json');
+			form.setRequestHeader('Accept', 'application/json');
 
 			form.onreadystatechange = function() {
 				if (form.readyState === 4 && form.status === 200) {
