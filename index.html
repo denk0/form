@@ -36,6 +36,7 @@
 				</label>
 
 				<button type="submit" class="ba-btn ba-form__btn">Purchase</button>
+				<div class="status"></div>
 			</form>
 		</div>
 	</section>
@@ -59,9 +60,7 @@
 
 			form.onreadystatechange = function() {
 				if (form.readyState === 4 && form.status === 200) {
-					console.log('Send');
-				} else {
-					console.log('error');
+					document.querySelector('.status').textContent = 'Your message was sent';
 				}
 			}
 
